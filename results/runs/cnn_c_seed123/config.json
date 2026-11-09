@@ -1,0 +1,41 @@
+{
+  "model": "cnn_c",
+  "seed": 123,
+  "kind": "official",
+  "epochs_max": 50,
+  "batch_size": 64,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "early_stopping_monitor": "val_loss",
+  "early_stopping_patience": 8,
+  "restore_best_weights": true,
+  "dropout_rate": 0.3,
+  "padding": "same",
+  "channels": [
+    "body_acc_x",
+    "body_acc_y",
+    "body_acc_z",
+    "body_gyro_x",
+    "body_gyro_y",
+    "body_gyro_z",
+    "total_acc_x",
+    "total_acc_y",
+    "total_acc_z"
+  ],
+  "train_samples": 5982,
+  "validation_samples": 1370,
+  "parameters": 85574,
+  "test_evaluated": false,
+  "prepared_sha256": "bc9e606d75b14f82b9f6d72dd85740b8d3c85c5faa558857f8cf3ece34d45283",
+  "validation_subjects": [
+    5,
+    11,
+    19,
+    26
+  ],
+  "source_sha256": {
+    "experiment.py": "53423f78cf5b51eea3cfc1820215d45f328dc64e4d26aecf829b6a443a73c436",
+    "data.py": "808379e80347e5893ccc0726cf055adf3031ec405fe3f07b4baccfb3e2cb447e"
+  },
+  "protocol_sha256": "d7b8141f13966cbd36c0af7e4cc804dc5b9bb660c7b06f23529d66e941e32f63"
+}

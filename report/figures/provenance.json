@@ -1,0 +1,22 @@
+{
+  "protocol_lock_sha256": "10640916f373dee2f1d85025c9fdbd0ccd8540c2fc557dcbfe82c7f91edac95a",
+  "script_sha256": "565e7fc24c2f2f5fa13507c28ca66b7fe998b369b39ed64464f09c4dd07e6821",
+  "source_csv_sha256": {
+    "baseline_test_predictions.csv": "c9d3eb1ccc970322c9630ce0020292e09b97306ed63f5d69a0b96e1071d8205d",
+    "metrics_per_run.csv": "357d8b0df2b849c26e27f06e42db5852e0c91ce059f56043c77bb5e4d2848abc",
+    "metrics_summary.csv": "73599d633427487c9456da994a48486398f753b97d786e8a7d82f1e675e3661c",
+    "test_class_metrics.csv": "8621ee96ebcf8c40c31999850cade2297d38c628537448c72b8fbc35f38065d6",
+    "test_error_pairs.csv": "58c56af2186a85fec67496b5f874832eadda4936f2e049695213a6da1330dd78",
+    "test_subject_metrics.csv": "d866b485283d5796d19d4ce605e1e6582d531f5c9003c092c51546d48a1901ad",
+    "validation_metrics_per_run.csv": "2a1d28f61d5c206e0e3c8973fe3b976087eae74c11e640fbd7b10d2cd502ed25",
+    "validation_metrics_summary.csv": "be5f2d27db70d45d1eb343d347e9702be444e6030884aa59d937034e1800fea4"
+  },
+  "figure_sha256": {
+    "cnn_b_accuracy_by_subject.png": "38e84aa00cbea5d665cf7e7812b0ab354e5c93cc791c904ef65684fbbed0079d",
+    "cnn_b_learning_curves.png": "2c1a5a8f1d30ea1f4b601c27be37558f813ddd354cc9c29cd750c357eaf735f3",
+    "cnn_b_recall_by_activity.png": "b71ae7c54025a29ce736582fdb103523c2791455afb950c04844587af8416e30",
+    "confusion_cnn_b_seed42.png": "9823026c3781541ad6d4626fea5a3b1f5a6bdfa2dda4460ccc4b7312de7ea489",
+    "model_comparison.png": "4dc62961d4d63b379095075e4cad91d5e2b5b1b2e9e8ef5e9aed3c88831188c2"
+  },
+  "test_inference_run": false
+}

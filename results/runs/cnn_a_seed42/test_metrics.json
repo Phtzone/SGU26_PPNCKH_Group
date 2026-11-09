@@ -1,0 +1,115 @@
+{
+  "split": "test",
+  "kind": "official",
+  "model": "cnn_a",
+  "seed": 42,
+  "parameters": 7494,
+  "training_seconds": 30.281830099993385,
+  "epochs_run": 19,
+  "best_epoch": 11,
+  "lock_sha256": "10640916f373dee2f1d85025c9fdbd0ccd8540c2fc557dcbfe82c7f91edac95a",
+  "checkpoint_sha256": "e2dd0a83db715cc638b7fdede758f0c3ecbc9cca1dba9b59557ff77530f23f54",
+  "accuracy": 0.9104173736002714,
+  "macro_f1": 0.9116310666687748,
+  "report": {
+    "WALKING": {
+      "precision": 0.9628180039138943,
+      "recall": 0.9919354838709677,
+      "f1-score": 0.9771598808341608,
+      "support": 496.0
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 0.9449152542372882,
+      "recall": 0.9469214437367304,
+      "f1-score": 0.9459172852598091,
+      "support": 471.0
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.955503512880562,
+      "recall": 0.9714285714285714,
+      "f1-score": 0.9634002361275088,
+      "support": 420.0
+    },
+    "SITTING": {
+      "precision": 0.8081896551724138,
+      "recall": 0.7637474541751528,
+      "f1-score": 0.7853403141361257,
+      "support": 491.0
+    },
+    "STANDING": {
+      "precision": 0.8051001821493625,
+      "recall": 0.8308270676691729,
+      "f1-score": 0.8177613320999075,
+      "support": 532.0
+    },
+    "LAYING": {
+      "precision": 0.9923664122137404,
+      "recall": 0.9683426443202979,
+      "f1-score": 0.9802073515551367,
+      "support": 537.0
+    },
+    "accuracy": 0.9104173736002714,
+    "macro avg": {
+      "precision": 0.9114821700945436,
+      "recall": 0.9122004442001489,
+      "f1-score": 0.9116310666687748,
+      "support": 2947.0
+    },
+    "weighted avg": {
+      "precision": 0.9100642928567304,
+      "recall": 0.9104173736002714,
+      "f1-score": 0.9100267771047724,
+      "support": 2947.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      492,
+      3,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      7,
+      446,
+      18,
+      0,
+      0,
+      0
+    ],
+    [
+      11,
+      1,
+      408,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      0,
+      375,
+      107,
+      4
+    ],
+    [
+      1,
+      0,
+      0,
+      89,
+      442,
+      0
+    ],
+    [
+      0,
+      17,
+      0,
+      0,
+      0,
+      520
+    ]
+  ]
+}

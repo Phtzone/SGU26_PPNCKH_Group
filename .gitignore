@@ -6,4 +6,5 @@ __pycache__/
 results/prepared/
 results/runs/**/model.keras
 results/runs/**/checkpoint.keras
+notebook_runs/
 

@@ -12,7 +12,7 @@
 
 Ngày lập: 09/11/2026. Ngày 1–7 bên dưới là ngày làm việc tương đối, không phải hạn nộp đã được giảng viên xác nhận.
 
-Tiến độ cập nhật: xem [nhật ký triển khai](../../research/progress.md). Đợt khởi động đã hoàn thành pipeline dữ liệu, notebook và ba lượt CNN-B trên validation; chưa thực hiện đánh giá test.
+Tiến độ cập nhật: xem [nhật ký triển khai](../../research/progress.md). Đã hoàn thành chín lượt CNN-A/B/C, khóa lựa chọn từ validation và đánh giá test; đang phát triển báo cáo từ các bản thảo Chương 1–3 và Chương 4–5.
 
 ## 1. Phạm vi và thứ tự ưu tiên
 
@@ -255,11 +255,11 @@ Chỉ tạo tệp khi thực hiện công việc tương ứng; không tạo tr�
 
 **Tệp:** Protocol, notebook, các thư mục lượt chạy CNN-A/C nếu thực hiện.
 
-- [ ] Đánh giá tiến độ viết và thời gian huấn luyện từ M4.
-- [ ] Nếu đủ điều kiện, tạo CNN-A/C theo Mục 5.3 và chạy cùng ba seed; không đổi split hoặc các tham số chung.
+- [x] Đánh giá tiến độ viết và thời gian huấn luyện từ M4.
+- [x] Nếu đủ điều kiện, tạo CNN-A/C theo Mục 5.3 và chạy cùng ba seed; không đổi split hoặc các tham số chung.
 - [ ] Nếu không đủ điều kiện, ghi E2 không thực hiện và cập nhật mục tiêu, giả thuyết cùng dàn ý báo cáo.
-- [ ] Tổng hợp chỉ số validation và ghi cấu hình đại diện theo quy tắc đã định.
-- [ ] Lưu bản protocol khóa, danh sách các lượt hợp lệ và những lần chạy lỗi bị loại kèm lý do.
+- [x] Tổng hợp chỉ số validation và ghi cấu hình đại diện theo quy tắc đã định.
+- [x] Lưu bản protocol khóa, danh sách các lượt hợp lệ và những lần chạy lỗi bị loại kèm lý do. Cả chín lượt chính thức hợp lệ, không loại lượt nào; smoke được giữ riêng.
 
 **Hoàn thành khi:** Danh sách mô hình/seed để đánh giá cuối đã cố định trước khi xem kết quả test.
 
@@ -267,13 +267,13 @@ Chỉ tạo tệp khi thực hiện công việc tương ứng; không tạo tr�
 
 **Tệp:** Các tệp test trong thư mục run, `results/metrics_per_run.csv`, `results/metrics_summary.csv`, `results/figures/`.
 
-- [ ] Nạp từng checkpoint đã khóa; đánh giá trên cùng test chính thức và baseline đã xác định từ train.
-- [ ] Xuất Accuracy, Macro-F1, classification report và dự đoán từng mẫu.
-- [ ] Tính lại Accuracy/Macro-F1 từ tệp dự đoán đã lưu và đối chiếu với bảng metrics.
-- [ ] Kiểm tra tổng phần tử confusion matrix bằng 2.947; tổng từng hàng khớp số mẫu lớp tương ứng.
-- [ ] Tổng hợp từng seed rồi tính mean/std nếu có nhiều seed; ghi rõ số lượt trong bảng.
-- [ ] Vẽ learning curves, confusion matrix và hình so sánh cấu hình nếu có E2. Ghi rõ split, seed và mô hình trong chú thích.
-- [ ] Phân tích các lỗi nổi bật và đánh giá H1/H2, H3 nếu có đủ dữ liệu; ghi rõ khi bằng chứng không ủng hộ giả thuyết.
+- [x] Nạp từng checkpoint đã khóa; đánh giá trên cùng test chính thức và baseline đã xác định từ train.
+- [x] Xuất Accuracy, Macro-F1, classification report và dự đoán từng mẫu.
+- [x] Tính lại Accuracy/Macro-F1 từ tệp dự đoán đã lưu và đối chiếu với bảng metrics.
+- [x] Kiểm tra tổng phần tử confusion matrix bằng 2.947; tổng từng hàng khớp số mẫu lớp tương ứng.
+- [x] Tổng hợp từng seed rồi tính mean/std nếu có nhiều seed; ghi rõ số lượt trong bảng.
+- [x] Vẽ learning curves, confusion matrix và hình so sánh cấu hình nếu có E2. Ghi rõ split, seed và mô hình trong chú thích.
+- [x] Phân tích các lỗi nổi bật và đánh giá H1/H2, H3 nếu có đủ dữ liệu; ghi rõ khi bằng chứng không ủng hộ giả thuyết.
 
 **Hoàn thành khi:** Mỗi số trong bảng chính có thể tính lại từ tệp kết quả; mỗi hình có chú thích và nguồn dữ liệu rõ ràng.
 
@@ -292,10 +292,10 @@ Chỉ tạo tệp khi thực hiện công việc tương ứng; không tạo tr�
 
 Tổng khoảng 23–26 trang theo phân bổ này; nếu cần theo quy mô 25–30 trang của đề cương, bổ sung phân tích có bằng chứng ở Chương 3 và 5. Không tăng dung lượng bằng lặp lại định nghĩa hoặc kéo giãn trình bày. Mục tiêu cuối cùng theo yêu cầu giảng viên.
 
-- [ ] Viết phần kết quả trực tiếp từ bảng/hình đã xuất; thống nhất tỷ lệ phần trăm và số thập phân.
-- [ ] Nêu rõ 6/9 kênh, 5.982 mẫu fit-train, kiến trúc giản lược, optimizer và huấn luyện khác bài gốc.
-- [ ] Khi kết quả cao hoặc thấp hơn bài gốc, giải thích điều kiện so sánh; không kết luận vượt trội chỉ từ chênh lệch Accuracy.
-- [ ] Nêu hạn chế: một dataset, ít người, thiết bị/vị trí đeo cố định, một split validation, số seed hữu hạn và phạm vi sáu hoạt động.
+- [x] Viết phần kết quả trực tiếp từ bảng/hình đã xuất; thống nhất tỷ lệ phần trăm và số thập phân.
+- [x] Nêu rõ 6/9 kênh, 5.982 mẫu fit-train, kiến trúc giản lược, optimizer và huấn luyện khác bài gốc.
+- [x] Khi kết quả cao hoặc thấp hơn bài gốc, giải thích điều kiện so sánh; không kết luận vượt trội chỉ từ chênh lệch Accuracy.
+- [x] Nêu hạn chế: một dataset, ít người, thiết bị/vị trí đeo cố định, một split validation, số seed hữu hạn và phạm vi sáu hoạt động.
 - [ ] Kiểm tra mọi trích dẫn trong nội dung có mục tương ứng ở danh mục tham khảo và ngược lại.
 - [ ] Kiểm tra mỗi hình/bảng được dẫn trong văn bản, có tiêu đề, đơn vị và nguồn.
 - [ ] Kết luận chỉ trả lời câu hỏi đã nghiên cứu; bỏ các phát biểu khẳng định giả thuyết chưa được kiểm chứng.
