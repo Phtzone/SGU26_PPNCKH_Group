@@ -1,0 +1,9 @@
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+results/prepared/
+results/runs/**/model.keras
+results/runs/**/checkpoint.keras
+

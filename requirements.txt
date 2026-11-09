@@ -1,0 +1,9 @@
+# Verified on Python 3.12; install in a project virtual environment.
+tensorflow==2.21.0
+numpy==2.5.4
+pandas==3.1.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0

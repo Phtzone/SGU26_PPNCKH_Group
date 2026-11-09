@@ -1,0 +1,108 @@
+{
+  "split": "validation",
+  "predicted_class": 5,
+  "activity": "LAYING",
+  "accuracy": 0.19562043795620437,
+  "macro_f1": 0.05453805453805454,
+  "report": {
+    "WALKING": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 226.0
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 196.0
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 182.0
+    },
+    "SITTING": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 248.0
+    },
+    "STANDING": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 250.0
+    },
+    "LAYING": {
+      "precision": 0.19562043795620437,
+      "recall": 1.0,
+      "f1-score": 0.32722832722832723,
+      "support": 268.0
+    },
+    "accuracy": 0.19562043795620437,
+    "macro avg": {
+      "precision": 0.03260340632603406,
+      "recall": 0.16666666666666666,
+      "f1-score": 0.05453805453805454,
+      "support": 1370.0
+    },
+    "weighted avg": {
+      "precision": 0.038267355746177206,
+      "recall": 0.19562043795620437,
+      "f1-score": 0.06401254868408153,
+      "support": 1370.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      226
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      196
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      182
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      248
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      250
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      268
+    ]
+  ]
+}

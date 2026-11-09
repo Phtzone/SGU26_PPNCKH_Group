@@ -1,0 +1,205 @@
+{
+  "channels": [
+    "body_acc_x",
+    "body_acc_y",
+    "body_acc_z",
+    "body_gyro_x",
+    "body_gyro_y",
+    "body_gyro_z",
+    "total_acc_x",
+    "total_acc_y",
+    "total_acc_z"
+  ],
+  "sampling_hz": 50,
+  "window_samples": 128,
+  "label_encoding": {
+    "0": "WALKING",
+    "1": "WALKING_UPSTAIRS",
+    "2": "WALKING_DOWNSTAIRS",
+    "3": "SITTING",
+    "4": "STANDING",
+    "5": "LAYING"
+  },
+  "train_original": {
+    "shape": [
+      7352,
+      128,
+      9
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "subjects": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      11,
+      14,
+      15,
+      16,
+      17,
+      19,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "class_counts": {
+      "WALKING": 1226,
+      "WALKING_UPSTAIRS": 1073,
+      "WALKING_DOWNSTAIRS": 986,
+      "SITTING": 1286,
+      "STANDING": 1374,
+      "LAYING": 1407
+    }
+  },
+  "fit_train": {
+    "shape": [
+      5982,
+      128,
+      9
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "subjects": [
+      1,
+      3,
+      6,
+      7,
+      8,
+      14,
+      15,
+      16,
+      17,
+      21,
+      22,
+      23,
+      25,
+      27,
+      28,
+      29,
+      30
+    ],
+    "class_counts": {
+      "WALKING": 1000,
+      "WALKING_UPSTAIRS": 877,
+      "WALKING_DOWNSTAIRS": 804,
+      "SITTING": 1038,
+      "STANDING": 1124,
+      "LAYING": 1139
+    }
+  },
+  "validation": {
+    "shape": [
+      1370,
+      128,
+      9
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "subjects": [
+      5,
+      11,
+      19,
+      26
+    ],
+    "class_counts": {
+      "WALKING": 226,
+      "WALKING_UPSTAIRS": 196,
+      "WALKING_DOWNSTAIRS": 182,
+      "SITTING": 248,
+      "STANDING": 250,
+      "LAYING": 268
+    }
+  },
+  "test": {
+    "shape": [
+      2947,
+      128,
+      9
+    ],
+    "dtype": "float32",
+    "finite": true,
+    "subjects": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ],
+    "class_counts": {
+      "WALKING": 496,
+      "WALKING_UPSTAIRS": 471,
+      "WALKING_DOWNSTAIRS": 420,
+      "SITTING": 491,
+      "STANDING": 532,
+      "LAYING": 537
+    }
+  },
+  "subject_overlap": [],
+  "normalization": {
+    "fit_on": "fit_train",
+    "axes": [
+      0,
+      1
+    ],
+    "mean": [
+      -0.0006292327271041567,
+      -0.0003476484399753446,
+      -0.0001877120687406295,
+      0.0023913955126875566,
+      -0.0012460318942916625,
+      -0.0001021531353028665,
+      0.8113666392558218,
+      0.009863350607213741,
+      0.06701618849983106
+    ],
+    "std": [
+      0.1907598521146704,
+      0.12182512216675473,
+      0.11042900887385562,
+      0.4011028006827079,
+      0.39158395027231596,
+      0.25927286390890614,
+      0.40189478268269463,
+      0.3767332114949281,
+      0.375750336639642
+    ]
+  },
+  "input_sha256": {
+    "train/Inertial Signals/body_acc_x_train.txt": "89f7bf5e360384804439d00f463dd2f717c452c683cac6c0a09b1a191d8ce4a2",
+    "train/Inertial Signals/body_acc_y_train.txt": "4775a586a5a1acc6706edee08c685835daea7bc1d9274e7e7e8d660fea173944",
+    "train/Inertial Signals/body_acc_z_train.txt": "9155718981ff1331dcd2d30aee545905ffba71af9ece5a08d6dfdeeb7d2ec4fb",
+    "train/Inertial Signals/body_gyro_x_train.txt": "423f6806f09059de3c1f443cf1d04a3c3907dc7ee17b5d296ed775b07aa6cde6",
+    "train/Inertial Signals/body_gyro_y_train.txt": "42419d8aaefd1a319561998defb167bfa57f7e51d656b6012d5a59c0b10f5260",
+    "train/Inertial Signals/body_gyro_z_train.txt": "05bc629faee918b0f5b99cd2e68f860c785889627ec8efeb85c29282f3963988",
+    "train/Inertial Signals/total_acc_x_train.txt": "41a7fe1da7b529cc6c2c3d7df97c98752bea74d7a142673dd59c7820fad3b5e6",
+    "train/Inertial Signals/total_acc_y_train.txt": "03bd3a80c0c04bf354597ad62920158b4b6605e157d856a1aab9abb357d40c5d",
+    "train/Inertial Signals/total_acc_z_train.txt": "5be3b593f88d49bb8f740c1c41379fc928ea8608d706594ebbba81cd800a5a33",
+    "train/subject_train.txt": "66e1e2fbe9b396fa5155f531dc3348c803f503be663e2318772d49947db9153a",
+    "train/y_train.txt": "415b3357e2e2d5e70a45c781947c6bdd80e0410a579d862eedcd6bbce3c694ef",
+    "test/Inertial Signals/body_acc_x_test.txt": "c07eb8ee8c76eafcd94b42111082700e10f4956b769fbbb0d5413c14f38774fa",
+    "test/Inertial Signals/body_acc_y_test.txt": "0ed0057b41f6870b16a6953ef17f6d42bc5542fa304319fb6b7f424dd3380f0b",
+    "test/Inertial Signals/body_acc_z_test.txt": "a2b58317137533bdbf2342bf301ae854c15b1168259cc7b582c2dd131e3d81d5",
+    "test/Inertial Signals/body_gyro_x_test.txt": "fb4f27f13e4e08055043f34ed52f6d8bbe8ebce7dff9475ff92be03b3d3f607c",
+    "test/Inertial Signals/body_gyro_y_test.txt": "d2501166b2b1f645b51f722fcf31f3aa1e9a3edae18d49322612f37b4495cb80",
+    "test/Inertial Signals/body_gyro_z_test.txt": "90a18ce534be0dfc616cefdac9874e2ea599ae20421cd161361c2a33f40cfa5e",
+    "test/Inertial Signals/total_acc_x_test.txt": "ea71c339c828561bc1dc6f7301a54aeb7e61e6312cb2387ebaea832ffd04203d",
+    "test/Inertial Signals/total_acc_y_test.txt": "32692c617b40c16e020bf059a316bd6bf3a63d771f030dfc5fa4003f390b6f67",
+    "test/Inertial Signals/total_acc_z_test.txt": "622ddf1d9532fbe340472074ef1edd1a2f58aa332682542bb36a8c03c9ba9e04",
+    "test/subject_test.txt": "63b8c577f4a85431c06bd87f6384608c90a9f72f05c7956dd21255dc63515c07",
+    "test/y_test.txt": "2a94cb53ca46b956c1b2aebd4a09a72badd8a8e9ea9cdfe9f31b3306a08666bb"
+  },
+  "prepared_sha256": "bc9e606d75b14f82b9f6d72dd85740b8d3c85c5faa558857f8cf3ece34d45283"
+}

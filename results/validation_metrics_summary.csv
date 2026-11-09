@@ -1,0 +1,2 @@
+model,n_runs,accuracy_mean,accuracy_std,macro_f1_mean,macro_f1_std,training_seconds_mean
+cnn_b,3,0.9503649635036496,0.006321353312295141,0.9535024822408927,0.0051867228851379035,35.13803603333266
