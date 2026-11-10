@@ -207,11 +207,13 @@ SGU26_PPNCKH_Group/
 ├── Paper/                   # Các công trình tham khảo
 ├── notebooks/
 │   ├── 01_har_experiment.ipynb
-│   └── 02_har_training.ipynb
+│   ├── 02_har_training.ipynb
+│   └── 03_practical_questions.ipynb
 ├── har_project/             # Pipeline dữ liệu, CNN, CLI và đánh giá
 ├── tests/                   # Kiểm thử dữ liệu, mô hình và notebook
 ├── results/                 # Kết quả tham chiếu, dự đoán và protocol lock
 ├── notebook_runs/           # Đầu ra các đợt huấn luyện bằng notebook
+├── practical_results/       # Thực nghiệm cảm biến và phân tích câu hỏi thực tế
 ├── report/                  # Nội dung báo cáo và hình minh họa
 ├── docs/research/           # Protocol và phân tích tài liệu
 ├── scripts/                 # Công cụ xuất hình báo cáo
@@ -220,6 +222,16 @@ SGU26_PPNCKH_Group/
 ```
 
 ## Tài liệu nghiên cứu
+
+[Notebook câu hỏi thực tế](notebooks/03_practical_questions.ipynb) phân tích khả năng nhận dạng người mới, lỗi ngồi–đứng và vai trò của các nhóm tín hiệu cảm biến. Phần cảm biến dùng CNN-B với năm biểu diễn đầu vào, ba seed và cùng validation tách theo người. Mã huấn luyện được trình bày trực tiếp trong notebook.
+
+- `inspect` (mặc định): xác minh và đọc đợt đã lưu trong `practical_results/sensor_study_v1/`, không huấn luyện hoặc ghi lại hiện vật.
+- `smoke`: một cấu hình, một seed, một epoch; đặt `RUN_NAME` riêng bắt đầu bằng `smoke`.
+- `train`: đủ năm cấu hình × ba seed; chọn tên đợt mới, lưu notebook rồi **Restart Kernel → Run All**.
+
+Đây là nghiên cứu khám phá sau khi đã xem test gốc. Các mô hình mới chỉ dùng official train/validation; phân tích test đọc dự đoán cũ. Chi tiết kiểm soát và giới hạn nằm trong [thiết kế câu hỏi thực tế](docs/research/practical-questions.md). Các câu trả lời có số liệu được lưu tại [answers.md](practical_results/sensor_study_v1/answers.md), kèm bảng CSV, hình và manifest SHA-256. Checkpoint không được Git theo dõi; cần đủ hiện vật cục bộ để chạy xác minh toàn bộ ở chế độ inspect.
+
+[Hướng dẫn giải thích khi thuyết trình](docs/research/practical-presentation.md) kết nối kết quả với tình huống sử dụng và các câu hỏi phản biện.
 
 | Tài liệu | Nội dung |
 |---|---|

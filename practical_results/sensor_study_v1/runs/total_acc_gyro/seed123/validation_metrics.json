@@ -1,0 +1,126 @@
+{
+  "accuracy": 0.9306569343065694,
+  "macro_f1": 0.9328111107699139,
+  "sit_stand_errors": 52,
+  "sitting_to_standing": 9,
+  "standing_to_sitting": 43,
+  "total_errors": 95,
+  "confusion_matrix": [
+    [
+      208,
+      0,
+      18,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      189,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      182,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      221,
+      9,
+      18
+    ],
+    [
+      0,
+      0,
+      0,
+      43,
+      207,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      268
+    ]
+  ],
+  "report": {
+    "WALKING": {
+      "precision": 0.9719626168224299,
+      "recall": 0.9203539823008849,
+      "f1-score": 0.9454545454545454,
+      "support": 226.0
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 1.0,
+      "recall": 0.9642857142857143,
+      "f1-score": 0.9818181818181818,
+      "support": 196.0
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 0.9054726368159204,
+      "recall": 1.0,
+      "f1-score": 0.9503916449086162,
+      "support": 182.0
+    },
+    "SITTING": {
+      "precision": 0.8371212121212122,
+      "recall": 0.8911290322580645,
+      "f1-score": 0.86328125,
+      "support": 248.0
+    },
+    "STANDING": {
+      "precision": 0.9583333333333334,
+      "recall": 0.828,
+      "f1-score": 0.8884120171673819,
+      "support": 250.0
+    },
+    "LAYING": {
+      "precision": 0.9370629370629371,
+      "recall": 1.0,
+      "f1-score": 0.9675090252707581,
+      "support": 268.0
+    },
+    "accuracy": 0.9306569343065694,
+    "macro avg": {
+      "precision": 0.9349921226926389,
+      "recall": 0.9339614548074439,
+      "f1-score": 0.9328111107699139,
+      "support": 1370.0
+    },
+    "weighted avg": {
+      "precision": 0.933417395893889,
+      "recall": 0.9306569343065694,
+      "f1-score": 0.9303427323699764,
+      "support": 1370.0
+    }
+  },
+  "recall_WALKING": 0.9203539823008849,
+  "recall_WALKING_UPSTAIRS": 0.9642857142857143,
+  "recall_WALKING_DOWNSTAIRS": 1.0,
+  "recall_SITTING": 0.8911290322580645,
+  "recall_STANDING": 0.828,
+  "recall_LAYING": 1.0,
+  "group": "total_acc_gyro",
+  "seed": 123,
+  "kind": "post_test_exploratory_validation",
+  "split": "validation",
+  "new_test_inference": false,
+  "parameters": 35334,
+  "training_seconds": 37.479534700047225,
+  "epochs_run": 12,
+  "best_epoch": 4,
+  "checkpoint_reload_verified": true,
+  "checkpoint_sha256": "0046558408d1d57b5cecf6d93e0038553920fb4a185399f0b241206750355f58"
+}

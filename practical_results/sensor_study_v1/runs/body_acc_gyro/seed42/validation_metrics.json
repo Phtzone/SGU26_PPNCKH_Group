@@ -1,0 +1,126 @@
+{
+  "accuracy": 0.92992700729927,
+  "macro_f1": 0.9365613888274043,
+  "sit_stand_errors": 32,
+  "sitting_to_standing": 11,
+  "standing_to_sitting": 21,
+  "total_errors": 96,
+  "confusion_matrix": [
+    [
+      226,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      196,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      182,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      193,
+      11,
+      44
+    ],
+    [
+      0,
+      0,
+      0,
+      21,
+      225,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      6,
+      10,
+      252
+    ]
+  ],
+  "report": {
+    "WALKING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 226.0
+    },
+    "WALKING_UPSTAIRS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 196.0
+    },
+    "WALKING_DOWNSTAIRS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 182.0
+    },
+    "SITTING": {
+      "precision": 0.8772727272727273,
+      "recall": 0.7782258064516129,
+      "f1-score": 0.8247863247863247,
+      "support": 248.0
+    },
+    "STANDING": {
+      "precision": 0.9146341463414634,
+      "recall": 0.9,
+      "f1-score": 0.907258064516129,
+      "support": 250.0
+    },
+    "LAYING": {
+      "precision": 0.84,
+      "recall": 0.9402985074626866,
+      "f1-score": 0.8873239436619719,
+      "support": 268.0
+    },
+    "accuracy": 0.92992700729927,
+    "macro avg": {
+      "precision": 0.9386511456023651,
+      "recall": 0.9364207189857167,
+      "f1-score": 0.9365613888274043,
+      "support": 1370.0
+    },
+    "weighted avg": {
+      "precision": 0.9309066955832134,
+      "recall": 0.92992700729927,
+      "f1-score": 0.9293170376477732,
+      "support": 1370.0
+    }
+  },
+  "recall_WALKING": 1.0,
+  "recall_WALKING_UPSTAIRS": 1.0,
+  "recall_WALKING_DOWNSTAIRS": 1.0,
+  "recall_SITTING": 0.7782258064516129,
+  "recall_STANDING": 0.9,
+  "recall_LAYING": 0.9402985074626866,
+  "group": "body_acc_gyro",
+  "seed": 42,
+  "kind": "post_test_exploratory_validation",
+  "split": "validation",
+  "new_test_inference": false,
+  "parameters": 35334,
+  "training_seconds": 139.10262050002348,
+  "epochs_run": 44,
+  "best_epoch": 36,
+  "checkpoint_reload_verified": true,
+  "checkpoint_sha256": "769ebfe79ff9a2e729bfb591247369ed3a2710beeb7110dfc496e49f4a54e404"
+}

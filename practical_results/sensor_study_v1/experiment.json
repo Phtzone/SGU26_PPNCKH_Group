@@ -1,0 +1,107 @@
+{
+  "kind": "post_test_exploratory_validation",
+  "groups": {
+    "total_acc": [
+      6,
+      7,
+      8
+    ],
+    "gyro": [
+      3,
+      4,
+      5
+    ],
+    "total_acc_gyro": [
+      6,
+      7,
+      8,
+      3,
+      4,
+      5
+    ],
+    "body_acc_gyro": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "all_9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "validation_subjects": [
+    5,
+    11,
+    19,
+    26
+  ],
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "epochs_max": 50,
+  "patience": 8,
+  "dropout": 0.3,
+  "new_test_inference": false,
+  "started_utc": "2026-11-10T04:11:28.203504+00:00",
+  "python": "3.12.13 (main, Jul 10 2026, 00:56:33) [MSC v.1944 64 bit (AMD64)]",
+  "tensorflow": "2.21.0",
+  "numpy": "2.5.4",
+  "packages": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0"
+  },
+  "runtime": {
+    "deterministic_ops_requested": true,
+    "intra_op_threads": 4,
+    "inter_op_threads": 2,
+    "dataset_private_threads": 2,
+    "dataset_max_intra_op_threads": 2,
+    "TF_ENABLE_ONEDNN_OPTS": "0"
+  },
+  "platform": "Windows-11-10.0.28000-SP0",
+  "devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "train_input_sha256": {
+    "train/Inertial Signals/body_acc_x_train.txt": "89f7bf5e360384804439d00f463dd2f717c452c683cac6c0a09b1a191d8ce4a2",
+    "train/Inertial Signals/body_acc_y_train.txt": "4775a586a5a1acc6706edee08c685835daea7bc1d9274e7e7e8d660fea173944",
+    "train/Inertial Signals/body_acc_z_train.txt": "9155718981ff1331dcd2d30aee545905ffba71af9ece5a08d6dfdeeb7d2ec4fb",
+    "train/Inertial Signals/body_gyro_x_train.txt": "423f6806f09059de3c1f443cf1d04a3c3907dc7ee17b5d296ed775b07aa6cde6",
+    "train/Inertial Signals/body_gyro_y_train.txt": "42419d8aaefd1a319561998defb167bfa57f7e51d656b6012d5a59c0b10f5260",
+    "train/Inertial Signals/body_gyro_z_train.txt": "05bc629faee918b0f5b99cd2e68f860c785889627ec8efeb85c29282f3963988",
+    "train/Inertial Signals/total_acc_x_train.txt": "41a7fe1da7b529cc6c2c3d7df97c98752bea74d7a142673dd59c7820fad3b5e6",
+    "train/Inertial Signals/total_acc_y_train.txt": "03bd3a80c0c04bf354597ad62920158b4b6605e157d856a1aab9abb357d40c5d",
+    "train/Inertial Signals/total_acc_z_train.txt": "5be3b593f88d49bb8f740c1c41379fc928ea8608d706594ebbba81cd800a5a33",
+    "train/y_train.txt": "415b3357e2e2d5e70a45c781947c6bdd80e0410a579d862eedcd6bbce3c694ef",
+    "train/subject_train.txt": "66e1e2fbe9b396fa5155f531dc3348c803f503be663e2318772d49947db9153a"
+  },
+  "archived_prediction_sha256": {
+    "runs/cnn_b_seed42/test_predictions.csv": "b00393ecad163428b6855a2e193effe26b8505e0c9f9807e39d7c766c3960625",
+    "runs/cnn_b_seed123/test_predictions.csv": "d30afebc1ce1ac3292a6f445d26b512daaca309cf7ae5450421e76fbca0dc179",
+    "runs/cnn_b_seed2026/test_predictions.csv": "d278cf32c30e65836fad4311c14088f129e1aa51d6c97f46a3caf5e64ce456ee"
+  },
+  "notebook_on_disk_sha256": "ca6c8aa531120d7494cbf8b6cd89443abbc14ceba96e0b773a7f9ca95beb07e4",
+  "protocol_sha256": "f0d53a86f07c9f64ff14ee23c882575d2794529fc7cca1bd79347afd705c6654",
+  "snapshot_scope": "Saved notebook on disk; actual execution configuration recorded in this file and each config.json"
+}

@@ -1,0 +1,10 @@
+baseline,candidate,seed,delta_macro_f1,delta_sit_stand_errors
+total_acc,total_acc_gyro,42,0.015539005148193508,-2
+total_acc,total_acc_gyro,123,-0.0059731585495050865,7
+total_acc,total_acc_gyro,2026,0.02492355171889038,0
+body_acc_gyro,all_9,42,0.013871195820619686,19
+body_acc_gyro,all_9,123,0.03054485561014164,11
+body_acc_gyro,all_9,2026,0.024422709092805306,15
+total_acc_gyro,all_9,42,0.023522906300790125,0
+total_acc_gyro,all_9,123,0.02667984593413919,-6
+total_acc_gyro,all_9,2026,0.02725408033778487,3

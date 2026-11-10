@@ -7,4 +7,7 @@ results/prepared/
 results/runs/**/model.keras
 results/runs/**/checkpoint.keras
 notebook_runs/
+practical_results/smoke*/
+practical_results/**/model.keras
+practical_results/**/checkpoint.keras
 

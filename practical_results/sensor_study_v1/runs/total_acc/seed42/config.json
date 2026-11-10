@@ -1,0 +1,67 @@
+{
+  "kind": "post_test_exploratory_validation",
+  "groups": {
+    "total_acc": [
+      6,
+      7,
+      8
+    ],
+    "gyro": [
+      3,
+      4,
+      5
+    ],
+    "total_acc_gyro": [
+      6,
+      7,
+      8,
+      3,
+      4,
+      5
+    ],
+    "body_acc_gyro": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "all_9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "validation_subjects": [
+    5,
+    11,
+    19,
+    26
+  ],
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "epochs_max": 50,
+  "patience": 8,
+  "dropout": 0.3,
+  "new_test_inference": false,
+  "group": "total_acc",
+  "seed": 42,
+  "channel_indices": [
+    6,
+    7,
+    8
+  ],
+  "parameters": 34374
+}
