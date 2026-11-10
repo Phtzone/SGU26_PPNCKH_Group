@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 
-NOTEBOOK = Path(__file__).resolve().parents[1] / 'notebooks/03_practical_questions.ipynb'
+NOTEBOOK = Path(__file__).resolve().parents[1] / 'notebooks/HAR_Research.ipynb'
 
 
 class PracticalNotebookTests(unittest.TestCase):

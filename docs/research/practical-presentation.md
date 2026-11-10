@@ -1,6 +1,6 @@
 # Giải thích các câu hỏi thực tế khi thuyết trình
 
-Tài liệu phục vụ giải thích kết quả, chưa phải bản báo cáo hoặc bộ slide. Số liệu và phép tính nằm trong [notebook](../../notebooks/03_practical_questions.ipynb) và [câu trả lời được tạo từ dữ liệu](../../practical_results/sensor_study_v1/answers.md).
+Toàn bộ nội dung giải thích dưới đây đã được tích hợp vào mục 8 của [notebook nghiên cứu duy nhất](../../notebooks/HAR_Research.ipynb). Tệp này giữ bản hướng dẫn dạng văn bản; số liệu truy nguyên từ [câu trả lời được tạo từ dữ liệu](../../practical_results/sensor_study_v1/answers.md).
 
 ## Người mới sử dụng thì mô hình có còn đúng không?
 

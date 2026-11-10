@@ -5,7 +5,7 @@ from pathlib import Path
 
 import nbformat
 
-NOTEBOOK = Path(__file__).resolve().parents[1] / "notebooks/02_har_training.ipynb"
+NOTEBOOK = Path(__file__).resolve().parents[1] / "notebooks/HAR_Research.ipynb"
 
 
 class TrainingNotebookTests(unittest.TestCase):
@@ -43,6 +43,21 @@ class TrainingNotebookTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 self.guards()["create_run_folder"](folder)
             self.assertEqual((folder / "evidence.txt").read_text(), "keep")
+
+    def test_sensor_only_run_is_rejected_before_architecture_output_is_created(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / "notebook_runs"
+            run = base / "v1"
+            sensor = run / "sensors"
+            sensor.mkdir(parents=True)
+            (sensor / "evidence.txt").write_text("keep")
+            guard = self.guards().get("reserve_research_run")
+            self.assertIsNotNone(guard, "Need shared run reservation before either training loop")
+            with self.assertRaises(FileExistsError):
+                guard(run / "architectures", sensor, base, root / "results")
+            self.assertFalse((run / "architectures").exists())
+            self.assertEqual((sensor / "evidence.txt").read_text(), "keep")
 
     def test_invalid_seeds_are_rejected_before_creating_output(self):
         validate = self.guards()["validate_seeds"]

@@ -2,7 +2,7 @@
 
 ## Trình bày huấn luyện bằng notebook ngày 09/11/2026
 
-Đã bổ sung [notebook huấn luyện từng bước](../../notebooks/02_har_training.ipynb), có mã NumPy đọc dữ liệu/chia theo người/chuẩn hóa, định nghĩa CNN-A/B/C, compile, callbacks và `model.fit()` trực tiếp trong các ô. Notebook này không gọi CLI hay hàm huấn luyện của `har_project`.
+Đã hợp nhất vào [notebook nghiên cứu duy nhất](../../notebooks/HAR_Research.ipynb), gồm nội dung nghiên cứu, mã NumPy đọc dữ liệu/chia theo người/chuẩn hóa, định nghĩa CNN-A/B/C, compile, callbacks, `model.fit()`, kết quả gốc và khảo sát cảm biến. Notebook này không gọi CLI hay hàm huấn luyện của `har_project`.
 
 Mặc định `RUN_MODE="inspect"` đọc lại lịch sử và bảng của các lượt gốc. Đổi sang `smoke` để kiểm tra một epoch CNN-B seed 42, hoặc `train` để chạy các mô hình/seed đã cấu hình. Các đợt mới chỉ ghi vào `notebook_runs/RUN_NAME/`; từ chối ghi đè, thoát đường dẫn hoặc ghi vào `results/` gốc. Việc huấn luyện notebook không nạp tín hiệu/nhãn test, chỉ đánh giá validation.
 

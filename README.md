@@ -117,17 +117,17 @@ Dataset/
 
 ## Huấn luyện bằng notebook
 
-Mở [02_har_training.ipynb](notebooks/02_har_training.ipynb) trong trình soạn thảo hỗ trợ Jupyter, chọn kernel `.venv/Scripts/python.exe` và chạy các ô theo thứ tự. Notebook chứa trực tiếp mã xử lý dữ liệu, định nghĩa CNN, compile, callbacks, `model.fit()`, nạp checkpoint và vẽ learning curves; không phụ thuộc các hàm huấn luyện trong `har_project`.
+Mở [HAR_Research.ipynb](notebooks/HAR_Research.ipynb), notebook duy nhất của dự án, chọn kernel `.venv/Scripts/python.exe` và chạy từ trên xuống dưới. Nội dung bao gồm vấn đề nghiên cứu, dữ liệu, chia tập, chuẩn hóa, baseline, CNN-A/B/C, huấn luyện, kết quả test, khảo sát cảm biến, câu trả lời thực tế, thảo luận và tài liệu tham khảo. Mã mô hình và `model.fit()` nằm trực tiếp trong các ô; không gọi notebook hoặc script huấn luyện khác.
 
 ### Các chế độ thực thi
 
 | `RUN_MODE` | Chức năng |
 |---|---|
-| `"inspect"` | Mặc định; xem dữ liệu, kiến trúc, lịch sử và kết quả đã lưu |
-| `"smoke"` | Kiểm tra pipeline với CNN-B, seed 42, một epoch |
-| `"train"` | Huấn luyện các cấu hình trong `MODELS` với danh sách `SEEDS` |
+| `"inspect"` | Mặc định; xác minh và trình bày toàn bộ nghiên cứu đã thực hiện, không huấn luyện |
+| `"smoke"` | CNN-B seed 42 và nhóm cảm biến all_9 seed 42, mỗi lượt một epoch |
+| `"train"` | Tái chạy phần kiến trúc theo `MODELS` và năm nhóm cảm biến theo `SEEDS`; mặc định 9 + 15 lượt |
 
-Ví dụ cấu hình huấn luyện mô hình cơ sở:
+Ví dụ tái chạy CNN-B và phần khảo sát cảm biến trong cùng notebook:
 
 ```python
 RUN_MODE = "train"
@@ -142,7 +142,7 @@ Sau khi chỉnh cấu hình, **Save → Restart Kernel → Run All**. Nếu dữ
 
 ### Đầu ra huấn luyện
 
-Mỗi đợt được lưu vào `notebook_runs/RUN_NAME/`, gồm:
+Mỗi đợt được lưu vào `notebook_runs/RUN_NAME/architectures/` và `notebook_runs/RUN_NAME/sensors/`, gồm:
 
 - Snapshot notebook trên đĩa và SHA-256, cấu hình thực thi và phiên bản môi trường.
 - Index chia tập và thống kê chuẩn hóa.
@@ -150,9 +150,9 @@ Mỗi đợt được lưu vào `notebook_runs/RUN_NAME/`, gồm:
 - Dự đoán, xác suất lớp, classification report và chỉ số validation.
 - Learning curves của lượt minh họa.
 
-`RUN_NAME` phải khác tên đợt đã tồn tại. Notebook chỉ ghi đầu ra mới bên trong `notebook_runs/`; phần huấn luyện không nạp tín hiệu hoặc nhãn test. Các lượt `smoke` được đánh dấu riêng và không tham gia kết quả thực nghiệm chính.
+`RUN_NAME` phải khác tên đợt đã tồn tại. Notebook chỉ ghi đầu ra mới bên trong `notebook_runs/`; phần huấn luyện không nạp tín hiệu hoặc nhãn test. Các lượt `smoke` được đánh dấu riêng và không tham gia kết quả thực nghiệm chính. Mọi lượt tái chạy chỉ đánh giá validation; các bảng test luôn được ghi rõ là bộ kết quả tham chiếu đã khóa.
 
-[01_har_experiment.ipynb](notebooks/01_har_experiment.ipynb) cung cấp giao diện kiểm tra bộ thực nghiệm gốc, xác minh cache và đọc kết quả validation/test đã khóa.
+Notebook đã lưu đầu ra để đọc ngay. Chạy `inspect` cần đủ dữ liệu, cache/checkpoint và các hiện vật tham chiếu trong `results/` cùng `practical_results/sensor_study_v1/`. Các snapshot notebook trong hiện vật là bằng chứng lịch sử, không phải tài liệu làm việc riêng.
 
 ## Tái chạy pipeline bằng dòng lệnh
 
@@ -206,9 +206,7 @@ SGU26_PPNCKH_Group/
 ├── Dataset/                 # UCI HAR và tài liệu mô tả dữ liệu
 ├── Paper/                   # Các công trình tham khảo
 ├── notebooks/
-│   ├── 01_har_experiment.ipynb
-│   ├── 02_har_training.ipynb
-│   └── 03_practical_questions.ipynb
+│   └── HAR_Research.ipynb    # Toàn bộ nghiên cứu theo thứ tự từ đầu đến cuối
 ├── har_project/             # Pipeline dữ liệu, CNN, CLI và đánh giá
 ├── tests/                   # Kiểm thử dữ liệu, mô hình và notebook
 ├── results/                 # Kết quả tham chiếu, dự đoán và protocol lock
@@ -223,11 +221,10 @@ SGU26_PPNCKH_Group/
 
 ## Tài liệu nghiên cứu
 
-[Notebook câu hỏi thực tế](notebooks/03_practical_questions.ipynb) phân tích khả năng nhận dạng người mới, lỗi ngồi–đứng và vai trò của các nhóm tín hiệu cảm biến. Phần cảm biến dùng CNN-B với năm biểu diễn đầu vào, ba seed và cùng validation tách theo người. Mã huấn luyện được trình bày trực tiếp trong notebook.
+[HAR_Research.ipynb](notebooks/HAR_Research.ipynb) tích hợp phần câu hỏi thực tế sau kết quả thực nghiệm gốc: khả năng nhận dạng người mới, lỗi ngồi–đứng và vai trò của các nhóm tín hiệu cảm biến. Phần cảm biến dùng CNN-B với năm biểu diễn đầu vào, ba seed và cùng validation tách theo người.
 
-- `inspect` (mặc định): xác minh và đọc đợt đã lưu trong `practical_results/sensor_study_v1/`, không huấn luyện hoặc ghi lại hiện vật.
-- `smoke`: một cấu hình, một seed, một epoch; đặt `RUN_NAME` riêng bắt đầu bằng `smoke`.
-- `train`: đủ năm cấu hình × ba seed; chọn tên đợt mới, lưu notebook rồi **Restart Kernel → Run All**.
+- `inspect` đọc cả chín lượt kiến trúc gốc và 15 lượt cảm biến tham chiếu, tính lại bảng và vẽ hình.
+- `smoke`/`train` tái chạy hai phần trong cùng notebook vào một đợt mới bên trong `notebook_runs/`.
 
 Đây là nghiên cứu khám phá sau khi đã xem test gốc. Các mô hình mới chỉ dùng official train/validation; phân tích test đọc dự đoán cũ. Chi tiết kiểm soát và giới hạn nằm trong [thiết kế câu hỏi thực tế](docs/research/practical-questions.md). Các câu trả lời có số liệu được lưu tại [answers.md](practical_results/sensor_study_v1/answers.md), kèm bảng CSV, hình và manifest SHA-256. Checkpoint không được Git theo dõi; cần đủ hiện vật cục bộ để chạy xác minh toàn bộ ở chế độ inspect.
 

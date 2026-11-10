@@ -31,7 +31,7 @@ Thiết kế mở rộng ngày 10/11/2026, sau khi đã xem test của protocol 
 
 ## Sản phẩm
 
-- [Notebook thực nghiệm](../../notebooks/03_practical_questions.ipynb).
+- [Notebook nghiên cứu hợp nhất](../../notebooks/HAR_Research.ipynb), mục 7 trình bày khảo sát cảm biến.
 - `practical_results/sensor_study_v1/`: 15 lượt và các bảng/hình trả lời.
 - `practical_results/sensor_study_v1/answers.md`: câu trả lời có số liệu, cách nói khi thuyết trình và giới hạn.
 

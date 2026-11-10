@@ -14,7 +14,7 @@ from har_project.data import file_hash
 
 class NotebookInspectionTests(unittest.TestCase):
     def data_cell(self):
-        path = Path(__file__).resolve().parents[1] / "notebooks/01_har_experiment.ipynb"
+        path = Path(__file__).resolve().parents[1] / "notebooks/HAR_Research.ipynb"
         notebook = nbformat.read(path, as_version=4)
         return next(cell.source for cell in notebook.cells if "load-data" in cell.metadata.get("tags", []))
 
